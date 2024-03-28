@@ -60,7 +60,7 @@ body{
     background-color: white !important;
 }
 
-@media (min-width: 100px) and (max-width: 992px)
+@media (min-width: 425px) and (max-width: 992px)
 {
     .container {
         padding: 10px; /* Adjust padding for smaller screens */
@@ -74,5 +74,31 @@ body{
     .black{
         display: flex;
         
+    }
+}
+
+@media (min-width: 100px) and (max-width: 425px)
+{
+    .container {
+        padding: 0px;
+        margin-right: 10px !important; 
+        margin-left: 10px !important;
+    }
+    .first{
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+    }
+    .red{
+        padding: 3px !important;
+    }
+    .black{
+        display: flex;
+        
+    }
+    .ved{
+        height: 300px !important;
+        width: 300px !important;
     }
 }
