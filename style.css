@@ -120,28 +120,73 @@ body{
   background-color: #ffffff;
   border-radius: 50%;
   display: inline-block;
+  z-index: 2;
   
+  
+}
+.feature-1{
+    display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
 }
 .fast{
     background-image: url(./running.gif);
   background-repeat: no-repeat;
   background-size: 0 0;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 .evolve{
     background-image: url(./evolve.gif);
   background-repeat: no-repeat;
   background-size: 0 0;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 .dynamic{
     background-image: url(./dynamic.gif);
   background-repeat: no-repeat;
   background-size: 0 0;
+  grid-area: 1 / 1 / 2 / 2;
 }
+.long{
+    width: 200px;
+    height: 0px;
+    background-color: #000000;
+    overflow: hidden;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    grid-area: 1 / 1 / 3 / 2;
+    margin-top: 100px;
+    transition: height 0.5s ease-in-out;  
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+
+}
+.gyaan{
+    margin-top: 100px;
+    color: #ffffff;
+    font-family: "Comic Neue",cursive;
+    
+}
+.longanime{
+    height: 300px;
+}
+.longtransform{
+    transform: translate(7px, 7px);
+}
+
 .fastanimated{
     background-size: cover;
     color: rgba(0, 0, 0, 0);
+    
 }
 .circleanime
 {
@@ -167,6 +212,9 @@ body{
 }
 
 
+
+
+    
 @media (min-width: 425px) and (max-width: 992px)
 {
     .container {
