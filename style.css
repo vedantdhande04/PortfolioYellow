@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 body{
     background-color: #FFD93D;
 }
@@ -38,18 +40,25 @@ body{
     align-items: center;
     justify-content: center;}
     
-#logo{
+.logoborder{
     
         -webkit-filter: drop-shadow(7px 5px 0 black)
-                        drop-shadow(-1px -1px 0 black);
+                        drop-shadow(0px 0px 0 black);
         filter: drop-shadow(7px 5px 0 black) 
-                drop-shadow(-1px -1px 0 black);
+                drop-shadow(0px 0px 0 black);
      
+}
+
+.logonoborder{
+    transform: translate(10px, 10px);
 }
 
 
 .nav-pills{
     align-items: center;
+    font-family: "Comic Neue", cursive;
+  font-weight: 600;
+  font-style: normal;
 
 }
 .nav-link{
@@ -60,10 +69,78 @@ body{
     background-color: white !important;
 }
 
+
+.second{
+    margin-top: 100px;
+}
+
+.yellowbox{
+    background-color: #FFD93D;
+    border-radius: 2ch;
+    border-color: black;
+    border: 3px solid;
+    border-right: 8px solid black;
+    border-bottom: 8px solid black;
+    
+}
+.whatido{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.whatido{
+    display: flex;
+    
+ 
+}
+.whattext{
+    font-family: "Comic Neue",cursive;
+    font-size: 54px !important;
+    font-weight: 600;
+}
+
+.circle{
+    height: 200px;
+  width: 200px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.circleanime
+{
+    border: 3px solid black;
+    border-right: 8px solid black;
+    border-bottom: 8px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleanimated{
+    transform: translate(7px, 7px);
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.giphy-embed{
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+
 @media (min-width: 425px) and (max-width: 992px)
 {
     .container {
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px; 
     }
     .first{
         display: flex;
@@ -105,4 +182,6 @@ body{
         height: 300px !important;
         width: 300px !important;
     }
+    
 }
+
