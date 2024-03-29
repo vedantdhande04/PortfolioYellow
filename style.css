@@ -216,7 +216,38 @@ grid-row-gap: 0px;
 
 
 
+/* FOR AMONG US FOOTER */
+#parentDiv {
+    position: relative;
+    width: 99%; /* Same width as the window */
+    height: 200px; /* Same height as the window */
+    overflow: hidden; /* Ensures that the movingDiv stays within bounds */
+  }
+  
+  #movingDiv {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    background-image: url(./yellow.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -3px;
+    left: 0; /* Initially position it at the left edge of the parentDiv */
+  }
+  #movingmsg{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    background-image: url(./msg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0; 
     
+  }
+
+
 @media (min-width: 425px) and (max-width: 992px)
 {
     .container {
@@ -266,22 +297,3 @@ grid-row-gap: 0px;
 }
 
 
-#parentDiv {
-    position: relative;
-    width: 99%; /* Same width as the window */
-    height: 200px; /* Same height as the window */
-    overflow: hidden; /* Ensures that the movingDiv stays within bounds */
-  }
-  
-  #movingDiv {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(255, 255, 255);
-    background-image: url(./yellow.gif);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -3px;
-    left: 0; /* Initially position it at the left edge of the parentDiv */
-  }
-  

@@ -129,3 +129,35 @@ $( "#logo" ).hover(
                 
                   moveDiv(); // Call the function to start moving the div
                 });
+
+                $(document).ready(function() {
+                  function moveDiv() {
+                    var parentDiv = $('#parentDiv');
+                    var div = $('#movingmsg');
+                    var position = 0;
+                    var direction = 1; // 1 for moving right, -1 for moving left
+                
+                    setInterval(function() {
+                      // Move the div
+                      position += direction * 2; // Adjust speed by changing the value
+                
+                      // Check if the div reaches the right edge of the parent div
+                      if (position >= parentDiv.width() - div.width()) {
+                        direction = -1; // Change direction to move left
+                         
+                      }
+                
+                      // Check if the div reaches the left edge of the parent div
+                      if (position <= 0) {
+                        direction = 1; // Change direction to move right
+                        div.css('transform', 'scaleX(1)'); // Reset div to original orientation
+                      }
+                
+                      // Apply new position
+                      div.css('left', position + 'px');
+                    }, 50); // Adjust interval for smoother or faster movement
+                  }
+                
+                  moveDiv(); // Call the function to start moving the div
+                });
+
