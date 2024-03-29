@@ -56,19 +56,27 @@ body{
 
 .nav-pills{
     align-items: center;
-    font-family: "Comic Neue", cursive;
-  font-weight: 600;
-  font-style: normal;
+    
 
 }
 .nav-link{
     color: black !important;
+    
 }
 
-.nav-link.active{
-    background-color: white !important;
+.nav-link.navanimate{
+    
+    border: solid 2px black;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    
 }
-
+.nav-item{
+    font-family: "Comic Neue", cursive;
+  font-weight: bold !important;
+  font-style: normal;
+  
+}
 
 .second{
     margin-top: 100px;
@@ -112,8 +120,29 @@ body{
   background-color: #ffffff;
   border-radius: 50%;
   display: inline-block;
+  
+}
+.fast{
+    background-image: url(./running.gif);
+  background-repeat: no-repeat;
+  background-size: 0 0;
 }
 
+.evolve{
+    background-image: url(./evolve.gif);
+  background-repeat: no-repeat;
+  background-size: 0 0;
+}
+
+.dynamic{
+    background-image: url(./dynamic.gif);
+  background-repeat: no-repeat;
+  background-size: 0 0;
+}
+.fastanimated{
+    background-size: cover;
+    color: rgba(0, 0, 0, 0);
+}
 .circleanime
 {
     border: 3px solid black;
@@ -131,11 +160,12 @@ body{
     justify-content: center;
     align-items: center;
 }
-.giphy-embed{
-    object-fit: cover;
-    border-radius: 50%;
-    
+.circlefeature{
+    font-family: "Comic Neue",cursive;
+    font-size: 40px !important;
+    font-weight: 400;
 }
+
 
 @media (min-width: 425px) and (max-width: 992px)
 {
