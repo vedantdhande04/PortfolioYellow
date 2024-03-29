@@ -99,65 +99,81 @@ $( "#logo" ).hover(
                   $( this ).removeClass( "navanimate" );
                 });
 
+          // For the cute yellow 
                 $(document).ready(function() {
                   function moveDiv() {
                     var parentDiv = $('#parentDiv');
                     var div = $('#movingDiv');
                     var position = 0;
-                    var direction = 1; // 1 for moving right, -1 for moving left
+                    var direction = 1; 
                 
                     setInterval(function() {
-                      // Move the div
-                      position += direction * 2; // Adjust speed by changing the value
+                      position += direction * 2; //speeeeeeeed
                 
-                      // Check if the div reaches the right edge of the parent div
+                      
                       if (position >= parentDiv.width() - div.width()) {
-                        direction = -1; // Change direction to move left
-                        div.css('transform', 'scaleX(-1)'); // Flip the div horizontally
+                        direction = -1; 
+                        div.css('transform', 'scaleX(-1)'); 
                       }
                 
-                      // Check if the div reaches the left edge of the parent div
+                      
                       if (position <= 0) {
-                        direction = 1; // Change direction to move right
-                        div.css('transform', 'scaleX(1)'); // Reset div to original orientation
+                        direction = 1; 
+                        div.css('transform', 'scaleX(1)'); 
                       }
                 
-                      // Apply new position
                       div.css('left', position + 'px');
-                    }, 50); // Adjust interval for smoother or faster movement
+                    }, 50); 
                   }
-                
-                  moveDiv(); // Call the function to start moving the div
+                moveDiv();
                 });
-
+      
+        //For cute yellow's messages
                 $(document).ready(function() {
                   function moveDiv() {
                     var parentDiv = $('#parentDiv');
                     var div = $('#movingmsg');
                     var position = 0;
-                    var direction = 1; // 1 for moving right, -1 for moving left
+                    var direction = 1; 
                 
                     setInterval(function() {
-                      // Move the div
-                      position += direction * 2; // Adjust speed by changing the value
-                
-                      // Check if the div reaches the right edge of the parent div
+                      position += direction * 2; 
                       if (position >= parentDiv.width() - div.width()) {
-                        direction = -1; // Change direction to move left
+                        direction = -1; 
                          
                       }
-                
-                      // Check if the div reaches the left edge of the parent div
+
                       if (position <= 0) {
-                        direction = 1; // Change direction to move right
-                        div.css('transform', 'scaleX(1)'); // Reset div to original orientation
+                        direction = 1; 
+                        div.css('transform', 'scaleX(1)'); 
                       }
                 
-                      // Apply new position
+                      
                       div.css('left', position + 'px');
-                    }, 50); // Adjust interval for smoother or faster movement
-                  }
-                
-                  moveDiv(); // Call the function to start moving the div
+                    }, 50); 
+                  }       
+                  moveDiv(); 
                 });
+
+
+                // Hiding and unhiding the messages
+                $(document).ready(function toggleClassWithDelay() {
+                  $("#movingmsg").removeClass("movingmsganime")
+                  .delay(12000).queue(function(next){
+                      $(this).addClass("movingmsganime");
+                     next();
+                      setTimeout(toggleClassWithDelay, 6000); 
+                  });
+                    });
+
+
+                    //random image selector , idk how to make it work together with above function so wrote it differently
+        $(document).ready(function() {
+          function rollDice() {
+              var randomNumber1 = Math.floor(Math.random() * 4) + 1;
+              $("#movingmsg").css("background-image", "url(./msg" + randomNumber1 + ".jpg)");
+          }
+          rollDice();
+          setInterval(rollDice, 13000);
+      });
 
