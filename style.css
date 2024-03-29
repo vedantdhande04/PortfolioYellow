@@ -59,8 +59,10 @@ body{
     
 
 }
-.nav-link{
+a.nav-link{
     color: black !important;
+    font-weight: 900 !important;
+    font-size: 20px;
     
 }
 
@@ -73,7 +75,7 @@ body{
 }
 .nav-item{
     font-family: "Comic Neue", cursive;
-  font-weight: bold !important;
+  
   font-style: normal;
   
 }
@@ -263,3 +265,23 @@ grid-row-gap: 0px;
     
 }
 
+
+#parentDiv {
+    position: relative;
+    width: 99%; /* Same width as the window */
+    height: 200px; /* Same height as the window */
+    overflow: hidden; /* Ensures that the movingDiv stays within bounds */
+  }
+  
+  #movingDiv {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    background-image: url(./yellow.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -3px;
+    left: 0; /* Initially position it at the left edge of the parentDiv */
+  }
+  
